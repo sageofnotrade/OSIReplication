@@ -1,7 +1,7 @@
 from OSI_Layers.Presentation import PresentationLayer
 
 class ApplicationLayer:
-    def __init__(self, port=12345):
+    def __init__(self, port=7777):
         self.presentation = PresentationLayer(port=port)
 
     def send(self, message):

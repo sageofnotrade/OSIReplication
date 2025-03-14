@@ -1,7 +1,7 @@
 from OSI_Layers.Transport import TransportLayer
 
 class SessionLayer:
-    def __init__(self, port=12345):
+    def __init__(self, port=7777):
         self.session_id = "SESSION123"
         self.transport = TransportLayer(port=port)
 

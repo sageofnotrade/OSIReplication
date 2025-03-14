@@ -2,7 +2,7 @@ import base64
 from OSI_Layers.Session import SessionLayer
 
 class PresentationLayer:
-    def __init__(self, port=12345):
+    def __init__(self, port=7777):
         self.session = SessionLayer(port=port)
 
     def send(self, data):
