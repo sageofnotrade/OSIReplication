@@ -50,7 +50,7 @@ class PhysicalLayer:
                 s.connect(('localhost', self.port))  
                 print("[Physical Layer] Connection successful!")  
                 s.sendall(binary_data.encode())
-                print("[Physical Layer] Data sent successfully!")  
+                print("[Physical Layer] Data sent successfully!\n")  
         except ConnectionRefusedError:
             print("[Physical Layer] Connection refused! Is the server running?")
 
