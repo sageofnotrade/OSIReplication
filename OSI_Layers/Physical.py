@@ -5,7 +5,7 @@ import time
 class PhysicalLayer:
     server_ready = threading.Event()
 
-    def __init__(self, port=7777):  # ✅ Keep port consistent
+    def __init__(self, port=7777): 
         self.port = port
         self.received_data = None
         self.data_received = threading.Event()
@@ -40,7 +40,7 @@ class PhysicalLayer:
 
     def send(self, data):
         PhysicalLayer.server_ready.wait()
-        time.sleep(1)  # ✅ Added delay to ensure the server is ready
+        time.sleep(1)
         binary_data = ''.join(format(ord(c), '08b') for c in data)
 
         print(f"[Physical Layer] Attempting to connect to localhost:{self.port}")  
@@ -57,5 +57,5 @@ class PhysicalLayer:
     def receive(self):
         """Wait until data is received, then return it."""
         self.data_received.wait()
-        print(f"[Physical Layer] Forwarding Data Up: {self.received_data}")  # ✅ Debugging print
+        print(f"[Physical Layer] Forwarding Data Up: {self.received_data}") 
         return self.received_data

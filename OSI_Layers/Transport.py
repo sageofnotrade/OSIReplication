@@ -14,8 +14,8 @@ class TransportLayer:
 
     def receive(self):
         """Receive and remove sequence number."""
-        segment = self.network.receive()  # This is received as bytes
-        segment_str = segment.decode()  # ✅ Convert from bytes to string
+        segment = self.network.receive() 
+        segment_str = segment.decode()  
 
-        print(f"Transport Layer Receiving: {segment_str}")  # ✅ Debugging print
-        return segment_str.split(":", 1)[1]  # ✅ Now it will not throw an error
+        print(f"Transport Layer Receiving: {segment_str}")
+        return segment_str.split(":", 1)[1] 

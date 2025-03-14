@@ -6,7 +6,7 @@ def main():
     app = ApplicationLayer(port)
 
     # Sending message
-    message = "Hello, OSI!"
+    message = "Hello World!"
     print(f"Original Message: {message}")
 
     PhysicalLayer.server_ready.wait()
